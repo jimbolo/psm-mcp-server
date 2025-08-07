@@ -28,6 +28,7 @@ README.md
 claude*
 nodemon.json
 package.json
+package-backup.json
 package.runtime.json
 railway.toml
 start-server.sh

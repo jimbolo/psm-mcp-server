@@ -38,6 +38,10 @@
     "node_modules",
     "dist",
     "test",
-    "src-archive"
+    "test-archive",
+    "src-archive",
+    "scripts",
+    "public",
+    "docs",
   ]
 }
