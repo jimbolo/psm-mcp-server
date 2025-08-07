@@ -6,7 +6,7 @@
   "main": "dist/standalone.js",
   "scripts": {
     "build": "npm run clean:dist && npm run bundle:standalone",
-    "bundle:standalone": "esbuild ./src/index.ts --bundle --platform=node --format=esm --outfile=./dist/standalone.js --external:node:*",
+    "bundle:standalone": "cd . && esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/standalone.js --external:node:* --tsconfig=tsconfig.json",
     "clean:dist": "node -e \"const fs=require('fs'); if(fs.existsSync('dist')) fs.rmSync('dist', {recursive:true, force:true}); fs.mkdirSync('dist', {recursive:true});\"",
     "start": "node dist/standalone.js",
     "start:standalone": "node dist/standalone.js"
