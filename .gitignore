@@ -3,8 +3,8 @@
 !vercel.json
 !dist/
 !package.production.json
-
-
+!src/
+!tsconfig.json
 
 yarn.lock
 pnpm-lock.yaml
@@ -13,13 +13,10 @@ pnpm-lock.yaml
 node_modules/
 docs/
 test*
-src/
-src*
 scripts/
 scripts/*
 public/
 public/*
-tsconfig.json
 next.config.js
 tailwind.config.js
 postcss.config.js
@@ -34,7 +31,6 @@ package.runtime.json
 railway.toml
 start-server.sh
 package-lock.json
-tsconfig.json
 .env
 .env.local
 .env.production

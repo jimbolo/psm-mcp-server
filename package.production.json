@@ -1,0 +1,26 @@
+{
+  "name": "postscan-mail-mcp-server",
+  "version": "1.0.0",
+  "description": "PostScan Mail MCP Server",
+  "type": "module",
+  "main": "dist/standalone.js",
+  "scripts": {
+    "build": "npm run clean:dist && npm run bundle:standalone",
+    "bundle:standalone": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/standalone.js --external:node:* --tsconfig=tsconfig.json",
+    "clean:dist": "node -e \"const fs=require('fs'); if(fs.existsSync('dist')) fs.rmSync('dist', {recursive:true, force:true}); fs.mkdirSync('dist', {recursive:true});\"",
+    "start": "node dist/standalone.js",
+    "start:standalone": "node dist/standalone.js"
+  },
+  "keywords": ["mcp", "server", "postscanmail", "api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "esbuild": "^0.25.8",
+    "typescript": "^5.8.3"
+  }
+}
